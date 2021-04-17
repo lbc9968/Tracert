@@ -160,14 +160,20 @@ def get_route(hostname):
                 else:
                     # Fill in start
                     # If there is an exception/error to your if statements, you should append that to your list here
-                    #print('Error')
-                    Error = "Error"
-                    return Error
+                    print('Error')
+                    #Error = "Error"
+                    #tracelist1.insert(-1, str(int((timeReceived - t) * 1000)) + "ms")
+                    #tracelist1.insert(-1, addr[0])
+                    #tracelist2.append(tracelist1)
+                    #return Error
                     # Fill in end
                 break
             finally:
                 #print(tracelist2)
                 mySocket.close()
-            return tracelist2
+    return tracelist2
 
-
+if __name__ == '__main__':
+    print(get_route("www.google.com"))
+    # ping("11.11.11.11")
+    #get_route("no.no.e")
